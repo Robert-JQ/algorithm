@@ -1,8 +1,9 @@
 package bag;
 
 import edu.princeton.cs.algs4.Bag;
-import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
+
+import java.util.Scanner;
 
 /**
  * @author jqq
@@ -13,8 +14,10 @@ import edu.princeton.cs.algs4.StdOut;
 public class Stats {
     public static void main(String[] args) {
         Bag<Double> numbers = new Bag<>();
-        while (!StdIn.isEmpty()) {
-            numbers.add(StdIn.readDouble());
+        Scanner scanner = new Scanner(System.in);
+        //以0作为输入完毕的标识
+        while (!scanner.hasNext("0")) {
+            numbers.add(scanner.nextDouble());
         }
         int N = numbers.size();
         double sum = 0.0;
