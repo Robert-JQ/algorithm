@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 /**
  * @author jqq
- * @desc 队列经典用例,队列是一种基于先进先出(FIFO)策略的数据结构
+ * @desc 队列(queue)经典用例,队列是一种基于先进先出(FIFO)策略的数据结构
  * @date 2018/08/17
  * Copyright (c) 2015 jigoon
  **/
