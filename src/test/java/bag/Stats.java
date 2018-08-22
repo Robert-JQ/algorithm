@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 /**
  * @author jqq
- * @desc 背包经典用例,
+ * @desc 背包经典用例,背包是一种不支持删除元素的数据结构
  * @date 2018/08/15
  * Copyright (c) 2015 jigoon
  **/
