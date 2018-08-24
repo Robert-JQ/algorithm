@@ -2,6 +2,8 @@ package stack;
 
 import edu.princeton.cs.algs4.StdOut;
 
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 /**
@@ -50,6 +52,36 @@ public class FixedCapacityStack<Item> {
             temp[i] = a[i];
         }
         a = temp;
+    }
+
+    public Iterator<Item> iterator() {
+        return new FixedCapacityStackIterator();
+    }
+
+    private class FixedCapacityStackIterator implements Iterator<Item> {
+        private int i;
+
+        public FixedCapacityStackIterator() {
+            i = N - 1;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return i >= 0;
+        }
+
+        @Override
+        public Item next() {
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
+            return a[i--];
+        }
+
+        @Override
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
     }
 
     public static void main(String[] args) {
